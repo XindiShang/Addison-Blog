@@ -12,10 +12,10 @@
                 <div class="site-heading">
                     {% if not current_user.is_authenticated: %}
                     <h1>Addison's Blog</h1>
-                    <span class="subheading">A collection of random musings.</span>
+                    <span class="subheading">尚辛迪的个人博客</span>
                     {% else: %}
-                    <h1>Welcome, {{current_user.name}}</h1>
-                    <span class="subheading">Why not reading something fun?</span>
+                    <h1>欢迎回来，{{current_user.name}}</h1>
+                    <span class="subheading">随便看看呗</span>
                     {% endif %}
                 </div>
             </div>
@@ -55,7 +55,7 @@
             {% if current_user.id == 1: %}
 
             <div class="clearfix">
-                <a class="btn btn-primary float-right" href="{{url_for('add_new_post')}}">Create New Post</a>
+                <a class="btn btn-primary float-right" href="{{url_for('add_new_post')}}">发布内容</a>
             </div>
             {% endif %}
 

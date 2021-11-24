@@ -5,27 +5,27 @@ from flask_ckeditor import CKEditorField
 
 ##WTForm
 class CreatePostForm(FlaskForm):
-    title = StringField("Blog Post Title", validators=[DataRequired()])
-    subtitle = StringField("Subtitle", validators=[DataRequired()])
-    img_url = StringField("Blog Image URL", validators=[DataRequired(), URL()])
-    body = CKEditorField("Blog Content", validators=[DataRequired()])
-    submit = SubmitField("Submit Post")
+    title = StringField("标题", validators=[DataRequired()])
+    subtitle = StringField("副标题", validators=[DataRequired()])
+    img_url = StringField("图片链接", validators=[DataRequired(), URL()])
+    body = CKEditorField("内容", validators=[DataRequired()])
+    submit = SubmitField("发布")
 
 
 class RegisterForm(FlaskForm):
-    email = StringField("Email", validators=[DataRequired()])
-    name = StringField("Username", validators=[DataRequired()])
-    password = PasswordField("Password", validators=[DataRequired(), EqualTo("confirm", message="Password must match")])
-    confirm = PasswordField("Repeat Password")
-    submit = SubmitField("Sign up")
+    email = StringField("邮箱", validators=[DataRequired()])
+    name = StringField("用户名", validators=[DataRequired()])
+    password = PasswordField("密码", validators=[DataRequired(), EqualTo("confirm", message="Password must match")])
+    confirm = PasswordField("确认密码")
+    submit = SubmitField("注册")
 
 
 class LoginForm(FlaskForm):
-    email = StringField("Email", validators=[DataRequired()])
-    password = PasswordField("Password", validators=[DataRequired()])
-    submit = SubmitField("Log in")
+    email = StringField("邮箱", validators=[DataRequired()])
+    password = PasswordField("密码", validators=[DataRequired()])
+    submit = SubmitField("登录")
 
 
 class CommentForm(FlaskForm):
-    comment = CKEditorField("Comment", validators=[DataRequired()])
-    submit = SubmitField("SUBMIT COMMENT")
+    comment = CKEditorField("评论", validators=[DataRequired()])
+    submit = SubmitField("发布评论")
