@@ -15,8 +15,8 @@ This project is a personal blog app built with Flask. To see the demo, please cl
 
 2. Add environment variables *导入坏境变量，需要导入以下两个变量
 
- - export DATABASE_URL=<Your SQLAlchemy Database Url>(SQLAlchemy数据库url)
- - export SECRET_KET=<Your Flask WTForms Secret Key>(Flask WTForms的秘钥)
+ - export DATABASE_URL=Your SQLAlchemy Database Url(SQLAlchemy数据库url)
+ - export SECRET_KET=Your Flask WTForms Secret Key(Flask WTForms的秘钥)
 3. Run app on local server *本地运行应用
 
   - `python main.py runserver`
